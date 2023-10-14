@@ -1,0 +1,32 @@
+this file is created to show the output of the log once rebase is run
+
+BEFORE REBASE:
+
+ubuntu@ip-172-31-40-205:~/freshlab/commands$ git log --oneline
+1633a7c (HEAD -> dev, origin/dev) test merge
+954c55f further practicals in new branch dev
+ffb158a added a delete file to test by deleting the file
+c918e50 added new commands till fetch pull push
+713b9e6 Update fresh
+22e3b90 fresh
+ff72dd3 Create fresh
+
+AFTER REBASE:
+
+ubuntu@ip-172-31-40-205:~/freshlab/commands$ git pull origin main --rebase
+From https://github.com/kanna2030/commands
+ * branch            main       -> FETCH_HEAD
+Successfully rebased and updated refs/heads/dev.
+ubuntu@ip-172-31-40-205:~/freshlab/commands$ git log --oneline
+a918bd9 (HEAD -> dev) test merge
+9b5e75e (origin/main, origin/HEAD, main) merge dev with main
+9f37474 ignore 3 files i.e reset, ignore, testfile
+0f104e3 ignorefile
+67ed7c6 Revert "this is done bimistakely"
+44b13ee this is done bimistakely
+954c55f further practicals in new branch dev
+ffb158a added a delete file to test by deleting the file
+c918e50 added new commands till fetch pull push
+713b9e6 Update fresh
+22e3b90 fresh
+ff72dd3 Create fresh

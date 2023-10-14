@@ -1,3 +1,8 @@
 Commands we learned
 git init to initialize
 git status to check and found that it is in untracked level
+git add commands.txt  - to bring it to the staged level
+git commit -m "add commands" - to commit the file
+git log - to check the HASH id
+git restore - to restore the deleted file
+

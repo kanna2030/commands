@@ -131,5 +131,10 @@ note: once you do rebase you cannot come out of it
 
 > git pull origin master --rebase
 
+VII] stash
 
+stash is used for saving the file temporarily withou commiting and resume back to where you stopped in working directory
+
+>git stash- save the file half way without commting 
+>git stash pop- resume back to where you stopped
 

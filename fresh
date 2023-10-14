@@ -138,3 +138,6 @@ stash is used for saving the file temporarily withou commiting and resume back t
 >git stash- save the file half way without commting 
 >git stash pop- resume back to where you stopped
 
+Deleting any branch(here i hvae given eample for staging branch)- git branch -D staging
+
+

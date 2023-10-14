@@ -5,4 +5,8 @@ git add commands.txt  - to bring it to the staged level
 git commit -m "add commands" - to commit the file
 git log - to check the HASH id
 git restore - to restore the deleted file
-
+git rm --cached - to bring back the file from staged to the untracked level
+git log --oneline - to bring the hash ids only
+git log --oneline --pretty - to bring the small hash ids
+git config --global user.name "craoit"  - so instead of seeing a bigger name in author you will have your own username of git
+git config --global user.email "craoit2095@gmail.com" - same goes with email

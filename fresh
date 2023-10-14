@@ -54,3 +54,82 @@ e. run 1st command i.e git remote set-url --add origin https://<token>@<url that
 f. 2nd command i.e git push origin main
 
 Now your data is synced from local to the github repo
+
+Difference between clone and Fork:
+
+Clone: CLoning will clone the repository but whatever changes you made will affect original project 
+Fork: Fork will copy the repository and make changes to the forked repository, this will not change anything on the original repository
+
+				GITHUB ADVANCED
+
+Sync local repo with github [the steps is also for if the repo and folder name is smae then follow 7th step without clone]
+-- change the branch to dev
+-- git remote -v
+-- got to github and create a new repo
+-- copy the http url
+-- got to settings> developer settings> personal tokens> token(classic)> generate new token  (classic)> check box repo
+-- go to local > run command > git remote add origin https://<token>@<url from github>
+-- Run git remote -v
+-- git checkout master
+-- git push origin master
+the changes made in local will reflect on remote/github repo
+
+II] Revert
+revert isused if you bimistakely created a file which has a bug so instead of deleting the entire file you can revert the last commit 
+
+> git revert <commit id>
+then ctrl+X
+ so revert creates a new commit on whatever commit you want to revert back and maintain a version history
+
+III] Reset
+Reset will not create a new commit and not maintain a version history after you reset a particular commit
+
+reset hard, soft, mied
+
+NOTE: NEVER DO "git add . " this will stage all the files in the repo/folder
+
+> git reset <commit id of the previous commit>
+
+Once you run the above command the file will be untracked
+
+To see the file should not be tracked in the log simply run 
+> vim .gitignore
+enter the file name to it and save
+
+when you run git status you will see the message that all file are committed
+
+> git diff
+will show the changes made
+
+IV] Merge:
+
+steps:
+change to main/master branch
+-- git merge dev
+-- ctrl+X
+-- ls
+-- git push origin main/master
+-- git checkout dev
+-- git push origin dev
+
+you will see the main/master has all the files as that of dev also in github you will see there are 2 branches main/master and dev
+
+Now go to github and merge using gui 
+
+Steps:
+> got to pullrequest
+> add new pullrequest
+> base: main/master compare: dev
+> add reviwer mail id and once he approves you can click on merge pullrequest
+
+V] Squash
+>git merge dev --squash - to not get the long history but you will see the files only
+
+VI] Rebase:
+rebase will help maintain complete history in linear fashion without missing any comment whereas in merge you will see HEAD
+note: once you do rebase you cannot come out of it 
+
+> git pull origin master --rebase
+
+
+
